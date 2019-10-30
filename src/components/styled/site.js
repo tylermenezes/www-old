@@ -1,0 +1,54 @@
+import styled from 'styled-components';
+
+export const SiteHead = styled.header`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: ${({ theme }) => `${theme.modularScale(-1)} auto ${theme.modularScale(3)}`};
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+`;
+
+export const SiteTitle = styled.h1`
+  flex: 4 0 0;
+  font-family: ${({ theme }) => theme.font.mono};
+  &, a {
+    color: ${({ theme }) => theme.color.black};
+  }
+`;
+
+export const SiteNav = styled.ul`
+  flex: 8 0 0;
+  padding: 0;
+  text-align: right;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: ${({ theme }) => theme.columnPadding};
+
+    a {
+      font-size: ${({ theme }) => theme.modularScale(1)};
+      font-family: ${({ theme }) => theme.font.mono};
+      font-weight: 500;
+      color: ${({ theme }) => theme.color.black };
+    }
+  }
+`;
+
+export const SiteMain = styled.section`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
+`;
+
+export const SiteFooter = styled.footer`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: ${({ theme }) => theme.modularScale(5)} auto;
+
+  p {
+    font-family: ${({ theme }) => theme.font.body };
+    font-size: ${({ theme }) => theme.modularScale(0)};
+    color: ${({ theme }) => theme.color.grey[0] };
+  }
+`;
