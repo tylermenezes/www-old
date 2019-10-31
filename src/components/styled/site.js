@@ -16,6 +16,7 @@ export const SiteTitle = styled.h1`
   font-family: ${({ theme }) => theme.font.mono};
   &, a {
     color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
   }
 `;
 
