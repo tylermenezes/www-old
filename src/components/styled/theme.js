@@ -76,7 +76,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${({ theme }) => theme.font.body};
     font-size: ${({ theme }) => theme.modularScale(1)};
-    padding: ${({ theme }) => theme.columnPadding};
+    padding: 0 ${({ theme }) => theme.columnPadding};
+    margin: 0;
     color: ${({ theme }) => theme.color.black};
   }
 `;
