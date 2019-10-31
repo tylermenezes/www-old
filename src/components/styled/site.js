@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SiteHead = styled.header`
+export const SiteHead = styled.div`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: ${({ theme }) => `${theme.modularScale(-1)} auto ${theme.modularScale(3)}`};
   &:after {
