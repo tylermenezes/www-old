@@ -19,7 +19,7 @@ exports.onCreateWebpackConfig = ({
 module.exports = {
   siteMetadata: {
     title: `Tyler Menezes`,
-    description: `Tyler Menezes helps get kids interested in coding.`,
+    description: `Tyler Menezes helps inspire students to fall in love with coding.`,
     author: `@gatsbyjs`,
   },
 
