@@ -1,5 +1,21 @@
 var proxy = require("http-proxy-middleware");
 
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    plugins: [
+      plugins.define({
+        SC_DISABLE_SPEEDY: true
+      }),
+    ],
+  })
+}
+
 module.exports = {
   siteMetadata: {
     title: `Tyler Menezes`,
@@ -11,6 +27,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

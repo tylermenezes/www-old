@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const SiteHead = styled.div`
   max-width: ${({ theme }) => theme.maxWidth};
-  margin: ${({ theme }) => `${theme.modularScale(-1)} auto ${theme.modularScale(3)}`};
+  margin: ${({ theme }) => theme.modularScale(-1)} auto;
+  margin-bottom: ${({ theme }) => theme.modularScale(2)};
   &:after {
     content: "";
     display: block;

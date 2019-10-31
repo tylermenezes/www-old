@@ -17,14 +17,14 @@ export default ({ site, children, title }) => (
     render={ ({ site }) =>
       <Theme>
         <SEO title={title} />
-        <SiteHead>
-          <SiteTitle><Link to="/">{site.siteMetadata.title}</Link></SiteTitle>
-          <SiteNav>
-            <li><Link to="/press">Presskit</Link></li>
-            <li><Link to="/meet">Grab Coffee</Link></li>
-            <li><Link to="/plants">PlantCam</Link></li>
-          </SiteNav>
-        </SiteHead>
+          <SiteHead>
+            <SiteTitle><Link to="/">{site.siteMetadata.title}</Link></SiteTitle>
+            <SiteNav>
+              <li><Link to="/press">Presskit</Link></li>
+              <li><Link to="/meet">Grab Coffee</Link></li>
+              <li><Link to="/plants">PlantCam</Link></li>
+            </SiteNav>
+          </SiteHead>
         <SiteMain>{children}</SiteMain>
         <SiteFooter>
           <p>&copy; 2006-{new Date().getFullYear()}</p>
