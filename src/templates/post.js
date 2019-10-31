@@ -18,7 +18,7 @@ export default ({ data }) => {
     <Layout title={frontmatter.title}>
       {tableOfContents && postTitle(frontmatter, timeToRead)}
       <GridLayout>
-        <GridColumn width={8} start={!tableOfContents && 3}>
+        <GridColumn width={8} desktopStart={!tableOfContents && 3}>
           {!tableOfContents && postTitle(frontmatter, timeToRead)}
           <PostBody dangerouslySetInnerHTML={{ __html: html }} />
         </GridColumn>

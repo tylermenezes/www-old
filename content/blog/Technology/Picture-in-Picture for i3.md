@@ -53,6 +53,6 @@ following to `compton.conf`:
 
 With a quick restart of Compton, we're done!
 
-![The final product](/public/pip-demo-1.png)
+![The final product](pip-demo-1.png)
 
 [^1]: i3 doesn't support setting the size of a window, only growing and shrinking it. Since we don't know the inital size, the provided snippet first makes it 0x0, then grows it to the desired size.

@@ -13,7 +13,7 @@ background a random featured photo from the many beautiful photos on
 
 Here's a sample of the end result:
 
-![My desktop at the time of writing, thanks to this script.](/public/unsplash-demo-2.png)
+![My desktop at the time of writing, thanks to this script.](unsplash-demo-2.png)
 
 In order to use this script, you'll need to
 [register for API access](https://unsplash.com/oauth/applications/new), and set `CLIENT_ID` to the

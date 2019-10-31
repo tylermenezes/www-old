@@ -20,16 +20,14 @@ theme.font = {
 };
 
 theme.color = {
-  black: '#1d2126',
+  black: '#382235',
   white: '#ffffff',
-  grey: ['#556270', '#8b99a7', '#d6dbe0'],
-  red: ['#C44D58', '#C7F464'],
-  blue: ['#4ECDC4', '#a4e5e1'],
-  green: ['#C7F464', '#e5fab7'],
+  grey: ['#71566e', '#a98ea6', '#e0d6df'],
+  blue: ['#1E6B93', '#67C9E8'],
 }
 theme.color.primary = theme.color.black;
 theme.color.background = theme.color.white;
-theme.color.accent = theme.color.red[0];
+theme.color.accent = theme.color.blue[0];
 
 
 const GlobalStyle = createGlobalStyle`
@@ -78,6 +76,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${({ theme }) => theme.font.body};
     font-size: ${({ theme }) => theme.modularScale(1)};
+    padding: ${({ theme }) => theme.columnPadding};
+    color: ${({ theme }) => theme.color.black};
   }
 `;
 export default ({ children }) => <ThemeProvider theme={theme}><GlobalStyle />{children}</ThemeProvider>;

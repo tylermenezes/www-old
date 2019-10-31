@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import logo from "../../../content/logo.svg";
 
 export const SiteHead = styled.div`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: ${({ theme }) => theme.modularScale(-1)} auto;
   margin-bottom: ${({ theme }) => theme.modularScale(2)};
+
   &:after {
     content: "";
     display: block;
@@ -13,10 +15,29 @@ export const SiteHead = styled.div`
 
 export const SiteTitle = styled.h1`
   float: left;
-  font-family: ${({ theme }) => theme.font.mono};
-  &, a {
-    color: ${({ theme }) => theme.color.black};
+
+  a {
+    font-size: 1px;
+    text-indent: -100px;
     text-decoration: none;
+    overflow: hidden;
+
+    display: inline-block;
+    height: ${({ theme }) => theme.modularScale(3)};
+    width: calc( ${({ theme }) => theme.modularScale(3)} * 10 );
+
+    background-image: url(${logo});
+    background-size: contain;
+    background-position: 0 50%;
+    background-repeat: none;
+  }
+
+  @media (max-width: 768px) {
+    float: none;
+    text-align: center;
+    a {
+      background-position: 50% 50%;
+    }
   }
 `;
 
@@ -25,12 +46,22 @@ export const SiteNav = styled.ul`
   padding: 0;
   text-align: right;
   position: relative;
-  top: 15px;
+  top: 10px;
+
+  @media (max-width: 768px) {
+    float: none;
+    position: initial;
+    top: auto;
+    text-align: center;
+  }
 
   li {
     list-style-type: none;
     display: inline-block;
-    padding-left: ${({ theme }) => theme.columnPadding};
+
+    &:not(:first-child) {
+      padding-left: ${({ theme }) => theme.columnPadding};
+    }
 
     a {
       font-size: ${({ theme }) => theme.modularScale(1)};
@@ -48,11 +79,12 @@ export const SiteMain = styled.section`
 
 export const SiteFooter = styled.footer`
   max-width: ${({ theme }) => theme.maxWidth};
-  margin: ${({ theme }) => theme.modularScale(5)} auto;
+  margin: ${({ theme }) => theme.modularScale(3)} auto ${({ theme }) => theme.modularScale(-3)};
 
   p {
     font-family: ${({ theme }) => theme.font.body };
     font-size: ${({ theme }) => theme.modularScale(0)};
     color: ${({ theme }) => theme.color.grey[0] };
+    margin: 0;
   }
 `;

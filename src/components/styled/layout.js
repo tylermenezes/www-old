@@ -19,4 +19,8 @@ export const GridColumn = styled.section`
   @media (max-width: 768px) {
     ${({ mobileRow }) => mobileRow && `grid-row-start: ${mobileRow};`}
   }
+
+  @media (min-width: 768px) {
+    ${({ desktopStart }) => desktopStart && `grid-column-start: ${desktopStart};`}
+  }
 `;

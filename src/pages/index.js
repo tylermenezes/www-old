@@ -18,14 +18,14 @@ export default ({ data }) => (
     </HeroBox>
     <GridLayout>
       <GridColumn width={4} mobileRow={2}>
-        <h3 style={{ marginTop: 0 }}>Writing On Startups</h3>
+        <h3 style={{ marginTop: 0 }}>Writing On Education</h3>
+        <PostListing posts={data.education} />
+
+        <h3>Writing On Startups</h3>
         <PostListing posts={data.startups} />
 
         <h3>Writing On Tech</h3>
         <PostListing posts={data.tech} />
-
-        <h3>Writing On Education</h3>
-        <PostListing posts={data.education} />
       </GridColumn>
 
       <GridColumn width={8} mobileRow={1}>

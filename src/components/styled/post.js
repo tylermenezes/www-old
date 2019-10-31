@@ -34,7 +34,7 @@ export const PostContents = styled.div`
   }
 
   &, a {
-    color: ${({ theme }) => theme.color.grey[0]};
+    color: ${({ theme }) => theme.color.grey[1]};
     font-family: ${({ theme }) => theme.font.mono};
     font-size: ${({ theme }) => theme.modularScale(1)};
   }

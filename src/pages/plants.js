@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import { GridColumn, GridLayout } from '../components/styled';
 import Layout from '../templates/layout';
