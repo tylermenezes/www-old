@@ -21,11 +21,8 @@ export default () => (
     <GridLayout style={{ paddingTop: '1em' }}>
       <GridColumn width={9} mobileRow={2}>
         <BookFrame src="https://www.vyte.in/tylermenezes?embed" frameborder="0">https://www.vyte.in/tylermenezes</BookFrame>
-        <p><small>* I don't actually like coffee.</small></p>
       </GridColumn>
       <GridColumn width={3} mobileRow={1}>
-        <h3 style={{ marginTop: 0 }}>Travel Schedule</h3>
-        <p>If you're requesting a coffee meeting, here's my location.</p>
         <TripIt />
       </GridColumn>
     </GridLayout>
