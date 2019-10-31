@@ -21,7 +21,6 @@ export default ({ data }) => (
         <Img fixed={photo.childImageSharp.fixed} alt="Headshot of Tyler Menezes" />
       </a>
     ))}
-    <p><small>You have a </small></p>
   </Layout>
 )
 
