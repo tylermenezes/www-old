@@ -3,15 +3,15 @@ import styled from 'styled-components';
 export const SiteHead = styled.header`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: ${({ theme }) => `${theme.modularScale(-1)} auto ${theme.modularScale(3)}`};
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: baseline;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 `;
 
 export const SiteTitle = styled.h1`
-  flex: 4 0 0;
+  float: left;
   font-family: ${({ theme }) => theme.font.mono};
   &, a {
     color: ${({ theme }) => theme.color.black};
@@ -19,9 +19,11 @@ export const SiteTitle = styled.h1`
 `;
 
 export const SiteNav = styled.ul`
-  flex: 8 0 0;
+  float: right;
   padding: 0;
   text-align: right;
+  position: relative;
+  top: 15px;
 
   li {
     list-style-type: none;
