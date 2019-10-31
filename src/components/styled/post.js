@@ -18,12 +18,17 @@ export const PostMeta = styled.div`
 export const PostContents = styled.div`
   padding: ${({ theme }) => theme.modularScale(0)};
   border: 1px solid ${({ theme }) => theme.color.grey[2]};
+  position: sticky;
+  top: ${({ theme }) => theme.modularScale(1)};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &:before {
     content: "Contents";
     display: block;
     font-weight: 700;
-    text-align: center;
     margin-top: ${({ theme }) => theme.modularScale(-1)};
     margin-bottom: ${({ theme }) => theme.modularScale(1)};
   }
@@ -52,6 +57,14 @@ export const PostContents = styled.div`
 export const PostBody = styled.div`
   font-size: ${({ theme }) => theme.modularScale(1)};
   font-family: ${({ theme }) => theme.font.body};
+
+  hr {
+    border: none;
+    border-top: 1px solid ${({ theme }) => theme.color.grey[2]};
+    max-width: 20rem;
+    margin: ${({ theme }) => theme.modularScale(5)} auto;
+  }
+
 
   .footnotes {
     color: ${({ theme }) => theme.color.grey[0]};

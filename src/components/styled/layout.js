@@ -4,6 +4,10 @@ export const GridLayout = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: ${({ theme }) => theme.columnPadding};
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(${({ mobileCols }) => mobileCols || 1}, 1fr);
+  }
 `;
 
 export const GridColumn = styled.section`
@@ -11,4 +15,8 @@ export const GridColumn = styled.section`
   grid-column-end: ${({ width }) => `span ${width}`};
   box-sizing: border-box;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    ${({ mobileRow }) => mobileRow && `grid-row-start: ${mobileRow};`}
+  }
 `;

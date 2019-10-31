@@ -1,11 +1,20 @@
 import React from 'react';
 
-export default () => (
-  <>
-    <div id="tripit-badge"></div>
-    <script
-      type="text/javascript"
-      src="https://www.tripit.com/account/badge/id/B45BB42062FB85547BC75F18EE901C7E/div_id/tripit-badge/badge.js"
-    ></script>
-  </>
-);
+export default class TripIt extends React.Component {
+  state = {
+    html: null,
+  }
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      fetch('/.netlify/functions/tripit')
+        .then((resp) => resp.text())
+        .then((html) => this.setState({ html }));
+    }
+  }
+
+  render() {
+    const { html } = this.state;
+    return <div dangerouslySetInnerHTML={{ __html: html }} />
+  }
+}

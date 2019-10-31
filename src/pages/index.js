@@ -17,7 +17,7 @@ export default ({ data }) => (
       <Img fluid={data.hero.childImageSharp.fluid} />
     </HeroBox>
     <GridLayout>
-      <GridColumn width={4}>
+      <GridColumn width={4} mobileRow={2}>
         <h3 style={{ marginTop: 0 }}>Writing On Startups</h3>
         <PostListing posts={data.startups} />
 
@@ -28,7 +28,7 @@ export default ({ data }) => (
         <PostListing posts={data.education} />
       </GridColumn>
 
-      <GridColumn width={8}>
+      <GridColumn width={8} mobileRow={1}>
         <div dangerouslySetInnerHTML={{__html: data.content.html}} style={{ marginTop: '-1em' }} />
         <h3>Current/Upcoming Travel</h3>
         <TripIt />

@@ -15,7 +15,11 @@ export default ({ data }) => (
     <GridLayout>
       <GridColumn width={7}>
         <a href="https://plantcam.weirdvector.xyz/large.mjpg" target="_blank" rel="noopener noreferrer">
-          <img src="https://plantcam.weirdvector.xyz/small.mjpg" style={{ width: '100%' }} alt="Plant livestream" />
+          <img
+            src="https://plantcam.weirdvector.xyz/small.mjpg"
+            style={{ width: '100%', height: 'auto' }}
+            alt="Plant livestream"
+          />
         </a>
       </GridColumn>
       <GridColumn width={5}>
@@ -26,7 +30,7 @@ export default ({ data }) => (
     </GridLayout>
 
     <h2>Meet the Plants</h2>
-    <GridLayout>
+    <GridLayout mobileCols={8}>
       {data.photos.edges.map((n) => n.node).map((photo) => (
         <GridColumn width={4} style={{ textAlign: 'center' }}>
           <Img fluid={photo.childImageSharp.fluid} alt="" />

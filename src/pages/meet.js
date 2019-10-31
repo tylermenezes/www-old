@@ -15,16 +15,17 @@ export default () => (
     <h2 style={{ marginTop: 0 }}>Want to Grab Coffee?</h2>
     <p>
       If you'd like to grab coffee or talk on the phone, find a time that works for you below. If we don't already know
-      each other, please reply to the invite with an agenda or how else I can help.{' '}
+      each other, please add an agenda in the message field.{' '}
       <strong>Make sure you select the correct timezone.</strong>
     </p>
     <GridLayout style={{ paddingTop: '1em' }}>
-      <GridColumn width={9}>
+      <GridColumn width={9} mobileRow={2}>
         <BookFrame src="https://www.vyte.in/tylermenezes?embed" frameborder="0">https://www.vyte.in/tylermenezes</BookFrame>
         <p><small>* I don't actually like coffee.</small></p>
       </GridColumn>
-      <GridColumn width={3}>
-        <h3 style={{ marginTop: 0 }}>Where Am I?</h3>
+      <GridColumn width={3} mobileRow={1}>
+        <h3 style={{ marginTop: 0 }}>Travel Schedule</h3>
+        <p>If you're requesting a coffee meeting, here's my location.</p>
         <TripIt />
       </GridColumn>
     </GridLayout>

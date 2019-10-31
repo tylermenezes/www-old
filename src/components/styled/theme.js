@@ -39,13 +39,6 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.color.accent};
   }
 
-  hr {
-    border: none;
-    border-top: 1px solid ${({ theme }) => theme.color.grey[2]};
-    max-width: 20rem;
-    margin: ${({ theme }) => theme.modularScale(5)} auto;
-  }
-
   h2 {
     font-family: ${({ theme }) => theme.font.headLarge};
     font-weight: 500;
@@ -82,7 +75,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  font-family: ${({ theme }) => theme.font.body};
-  font-size: ${({ theme }) => theme.modularScale(1)};
+  body {
+    font-family: ${({ theme }) => theme.font.body};
+    font-size: ${({ theme }) => theme.modularScale(1)};
+  }
 `;
 export default ({ children }) => <ThemeProvider theme={theme}><GlobalStyle />{children}</ThemeProvider>;

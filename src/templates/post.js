@@ -23,7 +23,7 @@ export default ({ data }) => {
           <PostBody dangerouslySetInnerHTML={{ __html: html }} />
         </GridColumn>
         {tableOfContents && (
-          <GridColumn width={4}>
+          <GridColumn width={4} style={{ overflow: 'visible' }}>
             <PostContents dangerouslySetInnerHTML={{ __html: tableOfContents }} />
           </GridColumn>
         )}

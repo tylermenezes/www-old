@@ -1,9 +1,12 @@
+var proxy = require("http-proxy-middleware");
+
 module.exports = {
   siteMetadata: {
     title: `Tyler Menezes`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Tyler Menezes helps get kids interested in coding.`,
     author: `@gatsbyjs`,
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -20,7 +23,12 @@ module.exports = {
         //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-autolink-headers`]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,4 +37,16 @@ module.exports = {
       },
     },
   ],
+
+    developMiddleware: app => {
+      app.use(
+        "/.netlify/functions/",
+        proxy({
+          target: "http://localhost:9000",
+          pathRewrite: {
+            "/.netlify/functions/": "",
+          },
+        })
+      )
+    },
 }
