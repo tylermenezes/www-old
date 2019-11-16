@@ -34,7 +34,8 @@ export const SiteTitle = styled.h1`
 
   @media (max-width: 768px) {
     float: none;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 0;
     a {
       background-position: 50% 50%;
     }
@@ -52,7 +53,8 @@ export const SiteNav = styled.ul`
     float: none;
     position: initial;
     top: auto;
-    text-align: center;
+    text-align: left;
+    margin-top: 0;
   }
 
   li {

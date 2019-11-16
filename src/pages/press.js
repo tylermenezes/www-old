@@ -22,6 +22,15 @@ export default ({ data }) => (
         <Img fixed={photo.childImageSharp.fixed} alt="Headshot of Tyler Menezes" />
       </a>
     ))}
+
+    <h3>Past Coverage</h3>
+    {data.coverage.edges.map((n) => n.node).map((article) => (
+      <li style={{marginBottom: '0.5em'}}>
+        <a href={article.url} target="_blank">{article.title}</a><br />
+        {article.publication}, {article.date}
+      </li>
+    ))}
+
   </Layout>
 )
 
@@ -37,6 +46,17 @@ export const pageQuery = graphql`
 
     content: markdownRemark(fileAbsolutePath:{regex:"/.*\/content\/press\/index.md/"}) {
       html
+    }
+
+    coverage: allCoverageYaml(sort: {fields: date, order: DESC}) {
+      edges {
+        node {
+          date(formatString: "YYYY")
+          title
+          url
+          publication
+        }
+      }
     }
 
     photos: allFile(filter: {relativeDirectory: {eq: "press/photos"}}) {

@@ -18,14 +18,8 @@ export default ({ data }) => (
     </HeroBox>
     <GridLayout>
       <GridColumn width={4} mobileRow={2}>
-        <h3 style={{ marginTop: 0 }}>Writing On Education</h3>
-        <PostListing posts={data.education} />
-
-        <h3>Writing On Startups</h3>
-        <PostListing posts={data.startups} />
-
-        <h3>Writing On Tech</h3>
-        <PostListing posts={data.tech} />
+        <h3 style={{ marginTop: 0 }}>Writing</h3>
+        <PostListing posts={data.posts} />
       </GridColumn>
 
       <GridColumn width={8} mobileRow={1}>
@@ -51,24 +45,9 @@ export const pageQuery = graphql`
       }
     }
 
-
-    startups: allMarkdownRemark (
+    posts: allMarkdownRemark (
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/.*\/blog\/.*/" }, frontmatter: {category: {eq: "Startups"} } }
-    ) {
-      ...PostListingItems
-    }
-
-    tech: allMarkdownRemark (
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/.*\/blog\/.*/" }, frontmatter: {category: {eq: "Technology"} } }
-    ) {
-      ...PostListingItems
-    }
-
-    education: allMarkdownRemark (
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/.*\/blog\/.*/" }, frontmatter: {category: {eq: "Education"} } }
+      filter: { fileAbsolutePath: { regex: "/.*\/blog\/.*/" } }
     ) {
       ...PostListingItems
     }
