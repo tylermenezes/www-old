@@ -12,7 +12,7 @@ const PlantName = styled.div`
 `;
 
 export default ({ data }) => (
-  <Layout title="Press">
+  <Layout title="Plantcam">
     <GridLayout>
       <GridColumn width={7}>
         <a href="https://plantcam.weirdvector.xyz/large.mjpg" target="_blank" rel="noopener noreferrer">
