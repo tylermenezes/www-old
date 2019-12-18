@@ -22,7 +22,6 @@ export default ({ site, children, title }) => (
             <SiteNav>
               <li><Link to="/press">Press</Link></li>
               <li><Link to="/meet">Coffee</Link></li>
-              <li><Link to="/plants">PlantCam</Link></li>
             </SiteNav>
           </SiteHead>
         <SiteMain>{children}</SiteMain>
