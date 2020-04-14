@@ -18,12 +18,10 @@ export default () => (
       each other, please add an agenda in the message field.{' '}
       <strong>Make sure you select the correct timezone.</strong>
     </p>
+    <p>(If you're requesting an in-person meeting, please check my location on the Tripit badge on the homepage.)</p>
     <GridLayout style={{ paddingTop: '1em' }}>
-      <GridColumn width={9} mobileRow={2}>
+      <GridColumn width={12} mobileRow={2}>
         <BookFrame src="https://www.vyte.in/tylermenezes?embed" frameborder="0">https://www.vyte.in/tylermenezes</BookFrame>
-      </GridColumn>
-      <GridColumn width={3} mobileRow={1}>
-        <TripIt />
       </GridColumn>
     </GridLayout>
   </Layout>
