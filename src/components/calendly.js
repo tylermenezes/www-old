@@ -12,6 +12,7 @@ export default ({ slug }) => {
   const [hasCalendlyLoaded, setHasCalendlyLoaded] = useState(false);
 
   const typeOfWindow = typeof window; // For static analysis
+  const windowCalendly = typeOfWindow !== 'undefined' && window?.Calendly;
 
   useEffect(() => {
     if (window && !window.Calendly) {
@@ -35,9 +36,7 @@ export default ({ slug }) => {
   }, [typeOfWindow]);
 
   useEffect(() => {
-    console.log('useEffect', typeOfWindow, window?.Calendly, hasCalendlyLoaded);
-    if (window?.Calendly && holder) {
-      console.log('starting up calendly');
+    if (windowCalendly && holder) {
       window.Calendly.initInlineWidget({
         url: `https://calendly.com/${slug}`,
         parentElement: holder.current,
@@ -45,7 +44,7 @@ export default ({ slug }) => {
         utm: {}
       });
     }
-  }, [typeOfWindow, window?.Calendly, hasCalendlyLoaded, holder, slug]);
+  }, [windowCalendly, hasCalendlyLoaded, holder, slug]);
 
   return (
     <BookFrame ref={holder} />
