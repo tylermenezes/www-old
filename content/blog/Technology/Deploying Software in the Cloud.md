@@ -1,5 +1,5 @@
 ---
-date: 2020-07-05
+date: 2020-08-05
 category: Technology
 slug: deploying-software-in-the-cloud
 title: Deploying Software in the Cloud

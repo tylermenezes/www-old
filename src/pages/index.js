@@ -21,12 +21,6 @@ export default ({ data }) => (
         <h3 style={{ marginTop: 0 }}>Writing</h3>
         <PostListing posts={data.posts} />
       </GridColumn>
-
-      <GridColumn width={8} mobileRow={1}>
-        <div dangerouslySetInnerHTML={{__html: data.content.html}} style={{ marginTop: '-1em' }} />
-        <h3>Current/Upcoming Travel</h3>
-        <TripIt />
-      </GridColumn>
     </GridLayout>
   </Layout>
 );
