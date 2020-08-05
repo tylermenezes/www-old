@@ -1,4 +1,4 @@
-Tyler Menezes is the Executive Director at SRND, where he works to increase diverse Computer Science enrollment
+Tyler Menezes is the Executive Director at CodeDay, where he works to increase diverse Computer Science enrollment
 across North America by inspiring underrepresented students to give coding a try.
 
 Born in Canada but raised in the Pacific Northwest, he briefly attended the University of Washington before
