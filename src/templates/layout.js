@@ -20,7 +20,6 @@ export default ({ site, children, title }) => (
           <SiteHead>
             <SiteTitle><Link to="/">{site.siteMetadata.title}</Link></SiteTitle>
             <SiteNav>
-              <li><Link to="/press">Press</Link></li>
               <li><Link to="/meet">Meet</Link></li>
             </SiteNav>
           </SiteHead>

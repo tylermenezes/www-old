@@ -18,11 +18,24 @@ export default ({ data }) => (
     </HeroBox>
     <GridLayout>
       <GridColumn width={4} mobileRow={2}>
-        <h3 style={{ marginTop: 0 }}>Writing</h3>
+        <h3 style={{ marginTop: 0 }}>Press Coverage</h3>
+        {data.coverage.edges.map((n) => n.node).map((article) => (
+          <li style={{marginBottom: '0.5em'}}>
+            <a href={article.url} target="_blank">{article.title}</a><br />
+            {article.publication}, {article.date}
+          </li>
+        ))}
+        <h3>Writing</h3>
         <PostListing posts={data.posts} />
       </GridColumn>
       <GridColumn width={8} mobileRow={1}>
         <div dangerouslySetInnerHTML={{__html: data.content.html}} style={{ marginTop: '-1em' }} />
+        <h3>Press Photos</h3>
+        {data.photos.edges.map((n) => n.node).map((photo) => (
+          <a href={photo.publicURL} target="_blank" style={{ marginRight: '1em' }} rel="noopener noreferrer">
+            <Img fixed={photo.childImageSharp.fixed} alt="Headshot of Tyler Menezes" />
+          </a>
+        ))}
       </GridColumn>
     </GridLayout>
   </Layout>
@@ -30,9 +43,21 @@ export default ({ data }) => (
 
 export const pageQuery = graphql`
   query {
-    content: markdownRemark(fileAbsolutePath:{regex:"/.*\/content\/index.md/"}) {
+    content: markdownRemark(fileAbsolutePath:{regex:"/.*\/content\/press\/index.md/"}) {
       html
     }
+
+    coverage: allCoverageYaml(sort: {fields: date, order: DESC}) {
+      edges {
+        node {
+          date(formatString: "YYYY")
+          title
+          url
+          publication
+        }
+      }
+    }
+
 
     hero: file(relativePath: { eq: "index.jpg" }) {
       childImageSharp {
@@ -47,6 +72,19 @@ export const pageQuery = graphql`
       filter: { fileAbsolutePath: { regex: "/.*\/blog\/.*/" } }
     ) {
       ...PostListingItems
+    }
+
+    photos: allFile(filter: {relativeDirectory: {eq: "press/photos"}}) {
+      edges {
+        node {
+          publicURL
+          childImageSharp {
+            fixed(width: 100, height: 100, quality: 80) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
     }
   }
 `
