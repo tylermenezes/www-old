@@ -16,26 +16,36 @@ export default ({ data }) => (
     <HeroBox>
       <Img fluid={data.hero.childImageSharp.fluid} />
     </HeroBox>
+    <div style={{ maxWidth: '800px', margin: '0 auto '}}>
+      <div dangerouslySetInnerHTML={{__html: data.content.html}} style={{ marginTop: '-1em' }} />
+    </div>
     <GridLayout>
       <GridColumn width={4} mobileRow={2}>
-        <h3 style={{ marginTop: 0 }}>Press Coverage</h3>
+        <h3>Press Coverage</h3>
         {data.coverage.edges.map((n) => n.node).map((article) => (
           <li style={{marginBottom: '0.5em'}}>
             <a href={article.url} target="_blank">{article.title}</a><br />
             {article.publication}, {article.date}
           </li>
         ))}
+      </GridColumn>
+      <GridColumn width={4} mobileRow={1}>
         <h3>Writing</h3>
         <PostListing posts={data.posts} />
       </GridColumn>
-      <GridColumn width={8} mobileRow={1}>
-        <div dangerouslySetInnerHTML={{__html: data.content.html}} style={{ marginTop: '-1em' }} />
+      <GridColumn width={4} mobileRow={1}>
         <h3>Press Photos</h3>
         {data.photos.edges.map((n) => n.node).map((photo) => (
           <a href={photo.publicURL} target="_blank" style={{ marginRight: '1em' }} rel="noopener noreferrer">
             <Img fixed={photo.childImageSharp.fixed} alt="Headshot of Tyler Menezes" />
           </a>
         ))}
+        <h3>Research and Notes</h3>
+        <a href="https://publish.obsidian.md/tylermenezes">Go to Obsidian Publish &raquo;</a>
+        <p>
+          (Obsidian has all my research notes. Many are not related to technology or education. Most will not be
+          useful.)
+        </p>
       </GridColumn>
     </GridLayout>
   </Layout>
