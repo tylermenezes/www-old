@@ -20,7 +20,7 @@ export default ({ data }) => (
       <div dangerouslySetInnerHTML={{__html: data.content.html}} style={{ marginTop: '-1em' }} />
     </div>
     <GridLayout>
-      <GridColumn width={4} mobileRow={2}>
+      <GridColumn width={4} mobileCols={12} mobileRow={2}>
         <h3>Press Coverage</h3>
         {data.coverage.edges.map((n) => n.node).map((article) => (
           <li style={{marginBottom: '0.5em'}}>
@@ -29,11 +29,11 @@ export default ({ data }) => (
           </li>
         ))}
       </GridColumn>
-      <GridColumn width={4} mobileRow={1}>
+      <GridColumn width={4} mobileCols={12} mobileRow={3}>
         <h3>Writing</h3>
         <PostListing posts={data.posts} />
       </GridColumn>
-      <GridColumn width={4} mobileRow={1}>
+      <GridColumn width={4} mobileCols={12} mobileRow={1}>
         <h3>Press Photos</h3>
         {data.photos.edges.map((n) => n.node).map((photo) => (
           <a href={photo.publicURL} target="_blank" style={{ marginRight: '1em' }} rel="noopener noreferrer">
