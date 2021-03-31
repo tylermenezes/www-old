@@ -1,5 +1,5 @@
 ---
-date: 2020-10-20
+date: 2014-10-20
 category: Startups
 slug: questions-to-know-your-business
 title: Questions to Know Your Business
