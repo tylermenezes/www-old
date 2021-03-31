@@ -6,8 +6,8 @@ dropping out to start a Y Combinator and venture-backed social video startup in 
 working in machine learning at Microsoft Research and as a programmer at several Seattle startups, led to his work
 finding data-driven solutions to increasing CS diversity and enrollment since 2014.
 
-In his free time, Tyler produces the public speaking event Ignite Seattle, maintains some tech projects supporting the
-band Wintergatan's Marble Machine X project, and occasionally helps at the video game convention PAX.
+In his free time, Tyler consults for a few edtech companies, produces the public speaking event Ignite Seattle, and
+maintains some tech projects supporting the band Wintergatan's Marble Machine X project.
 
 You can learn more about Tyler on [the mostly-accurate Wikipedia page](https://en.wikipedia.org/wiki/Tyler_Menezes) or
 follow him on [Twitter.](https://twitter.com/tylermenezes)
