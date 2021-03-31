@@ -40,11 +40,10 @@ export default ({ data }) => (
             <Img fixed={photo.childImageSharp.fixed} alt="Headshot of Tyler Menezes" />
           </a>
         ))}
-        <h3>Research and Notes</h3>
+        <h3>Notes</h3>
         <a href="https://publish.obsidian.md/tylermenezes">Go to Obsidian Publish &raquo;</a>
         <p>
-          (Obsidian has all my research notes. Many are not related to technology or education. Most will not be
-          useful.)
+          (Obsidian has all my research notes. They may not be useful or even correct.)
         </p>
       </GridColumn>
     </GridLayout>
