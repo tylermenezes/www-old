@@ -7,7 +7,7 @@ working in machine learning at Microsoft Research and as a programmer at several
 finding data-driven solutions to increasing CS diversity and enrollment since 2014.
 
 In his free time produces the public speaking event Ignite Seattle and helps with some tech projects supporting the band
-Wintergatan's Marble Machine X project community.
+Wintergatan's Marble Machine project.
 
 You can learn more about Tyler on [the mostly-accurate Wikipedia page](https://en.wikipedia.org/wiki/Tyler_Menezes) or
 follow him on [Twitter.](https://twitter.com/tylermenezes)
