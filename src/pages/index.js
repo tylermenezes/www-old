@@ -30,7 +30,14 @@ export default ({ data }) => (
         ))}
       </GridColumn>
       <GridColumn width={4} mobileCols={12} mobileRow={3}>
-        <h3>Writing</h3>
+        <h3>Publications</h3>
+        {data.pubs.edges.map((n) => n.node).map((pub) => (
+          <li style={{marginBottom: '0.5em'}}>
+            <a href={pub.url} target="_blank">{pub.title}</a><br />
+            {pub.publication}, {pub.date}
+          </li>
+        ))}
+        <h3>Essays &amp; Blogs</h3>
         <PostListing posts={data.posts} />
       </GridColumn>
       <GridColumn width={4} mobileCols={12} mobileRow={1}>
@@ -54,6 +61,17 @@ export const pageQuery = graphql`
   query {
     content: markdownRemark(fileAbsolutePath:{regex:"/.*\/content\/press\/index.md/"}) {
       html
+    }
+
+    pubs: allPubsYaml(sort: {fields: date, order: DESC}) {
+      edges {
+        node {
+          date(formatString: "MMMM YYYY")
+          title
+          url
+          publication
+        }
+      }
     }
 
     coverage: allCoverageYaml(sort: {fields: date, order: DESC}) {
