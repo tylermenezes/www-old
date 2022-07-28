@@ -12,7 +12,7 @@ export default ({ slug }) => {
   const [hasCalendlyLoaded, setHasCalendlyLoaded] = useState(false);
 
   const typeOfWindow = typeof window; // For static analysis
-  const windowCalendly = typeOfWindow !== 'undefined' && window?.Calendly;
+  const windowCalendly = typeOfWindow !== 'undefined' && window.Calendly;
 
   useEffect(() => {
     if (window && !window.Calendly) {
