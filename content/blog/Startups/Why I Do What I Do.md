@@ -50,7 +50,7 @@ Computing is the great equalizer.
 
 ## Teaching
 
-But programming is still rarely taught, and even if that improved, our education system isn't set up to teach it properly.[^5]
+But programming is still rarely taught, and even if that improved, our education system isn't set up to teach it properly.
 
 I picked up programming because I chanced upon a book, and that may have been lucky in more ways than one: I've met many students who were initially bored by programming when their schools tried to expose them to it.
 
@@ -62,11 +62,11 @@ It doesn't have to be that way. Remember the three key facts about programming:
 
 The first two points make it incredibly important to teach and the last one makes teaching it easy but, because the formal education system can't teach in a way promoting individual empowerment, it won't ever stick.
 
-## SRND
+## CodeDay
 
 Because I'm confident that the education system can't properly teach programming, I've become incredibly passionate about filling that (very large) gap.
 
-SRND (which runs CodeDay and Labs) is the way I'm doing that, and our business model requires that we be a nonprofit. I'm not only okay with that, I can't imagine having it any other way. If SRND were for-profit, any payout I might get would go directly back into tech education, anyway.
+CodeDay is the way I'm doing that, and our business model requires that we be a nonprofit. I'm not only okay with that, I can't imagine having it any other way. If CodeDay were for-profit, any payout I might get would go directly back into tech education, anyway.
 
 There are trade-offs. There are constant difficulties with running a nonprofit (the subject of a future post) and, as with running any other startup, there are often large periods of pain on the way to success. Most importantly for most, I will never become a millionaire.
 
@@ -80,5 +80,3 @@ It doesn't matter. I can think of no better work to be doing than the work I do.
 [^3]: My parents once enrolled me in a youth soccer team. I hated it, so I played extremely poorly. At one point my parents offered me $100 if I actually tried for one game. I was so bad they couldn't tell the difference, and I never got the $100.
 
 [^4]: Paul Graham makes a compelling argument for this in [How to Make Wealth](http://www.paulgraham.com/wealth.html).
-
-[^5]: I made this argument in [Tech Education Doesn't Happen in the Classroom](http://blog.SRND.org/post/34556989032/tech-education-doesnt-happen-in-the-classroom)
